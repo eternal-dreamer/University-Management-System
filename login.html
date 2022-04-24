@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+form {border: 4px solid #000000;
+  width: 70%; 
+  margin-left : 18%;
+  margin-top: 2%;
+}
+
+.header {
+  text-align: center;
+  background: #191970;
+  color: white;
+  font-size: 35px;
+  font-family: serif;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2%;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #191970;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+
+}
+button:hover {
+  opacity: 0.8;
+}
+.container {
+  padding: 10px;
+  text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+  <div class="header">
+    <img src="logo.jpg" style="width:6.3%; float: left; margin-top: 0%; ">
+    <p>IGDTUW<br>
+      Login Form
+    </p>
+  </div>
+
+<form name="LoginForm" method="post" action="/action_page.php">
+  
+  <div class="container">
+
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" id="uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+        
+    <button type="submit" onclick="login(LoginForm); ">Login</button>
+  </div>
+</form>
+<script> 
+function login(LoginForm)
+{
+  if(LoginForm.uname.value && LoginForm.psw.value)
+  {
+    var uname=document.getElementById("uname").value;
+    document.write('<html><body><h1><center> <span style= "color: #fa0477">');
+    document.write("Welcome"+ " ");
+    document.write(uname);
+    document.write('</span></center></h1></body></html>');
+  }
+}
+</script>
+</body>
+</html>
